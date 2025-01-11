@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif,Arial;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+body,html{
+    background-color: #f8f8f8;
+    overflow: visible;
+}
+#header{
+    width: 100%;
+    padding: 10px;
+    padding-right: 60px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+}
+
+#header #opt{
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+#header #opt ul{
+    display: flex;
+}
+#header #opt a{
+    text-decoration: none;
+    color:#222222;
+    padding: 0 10px;
+    margin-left: 30px;
+    padding: 2px 2px;
+    border-radius: 5px;
+
+}
+
+#header #opt a li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+#header #opt a:hover{
+    background-color: #e7e4e4;
+    transition: 0.25s ease;
+}
+
+#main{
+    height: 93vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+#main #page{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#main #page #left{
+    display: flex;
+    padding-bottom: 5%;
+    padding-left: 20%;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#main #page #left h1{
+    font-size: 6rem;
+    color:#222222;
+    padding: 0;
+    font-weight: 300;
+}
+
+#main #page #left p{
+    margin-top: -25px;
+    margin-left: 4px;
+    font-size: 1.1rem;
+    left: 25px;
+}
+
+#main #page #left a{
+    background:#7b7b7b;
+    text-decoration: none;
+    padding: 5px;
+    width: auto;
+    color: #f8f8f8;
+    border-radius: 4px;
+    margin-top: 3%;
+    align-self: center;
+}
+
+#main #page #left a:hover{
+    background:#636161;
+    transition: 0.25 ease;
+}
+
+#main #page #left a img{
+    width: 20px;
+    height: 20px;
+}
+
+#main #page #back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main #page #back img{
+    height: 731px;
+    width: 731px;
+}
+
+hr{
+    width: 90%;
+    margin-left: 5%;
+}
+
+#about{
+    width: 100%;
+    padding: 5% 5%;
+}
+
+#about h1{
+    font-size: 4rem;
+    color:#222222;
+}
+#about #para{
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#about #para p{
+    font-size: 1.5rem;
+    color: #7b7b7b;
+}
+
+#skills{
+    width: 100%;
+    padding: 5% 5%;
+}
+
+#skills h1{
+    font-size: 4rem;
+    color:#222222;
+}
+
+#skills #tech{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px dotted black;
+    padding: 25px;
+    width: 80%;
+    margin-left: 10%;
+}
+#skills #tech .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#skills #tech .row div {
+    background-color:rgb(42, 42, 82);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+    align-items: center;
+    color:#f8f8f8;
+    box-shadow: 5px 5px 10px rgba(45, 45, 45,0.8);
+}
+#skills #tech div img{
+    width: 76px;
+    height: 76px;
+    margin-right: 20px;
+}
+
+#projects{
+    width: 100%;
+    height: 100vh;
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects h1{
+    font-size: 4rem;
+    color:#222222;
+}
+#projects #all .content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#projects #all{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#projects #all .content a{
+    width: 16%;
+    height: 80%;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    rotate:-5deg;
+    transition: 0.5s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,1);
+}
+
+#projects #all .content #pro1{
+    background-image: url(/images/weather.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#projects #all .content #pro2{
+    background-image: url(/images/students.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#projects #all .content #pro3{
+    background-image: url(/images/calc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: end;
+}
+#projects #all .content a:hover{
+    width: 16.5%;
+    height: 80.5%;
+    transition: 0.5s ease;
+}
+
+#projects #all .content #allpro{
+    background-color: #e7e6e6;
+    border: none;
+}
+
+#contacts{
+    padding: 5% 5%;
+    height: 100vh;
+}
+
+#contacts h1{
+    font-size: 4rem;
+}
+
+#contacts #det{
+    display: flex;
+    padding-top: 5%;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    flex-wrap: wrap;
+}
+
+#contacts #det #detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contacts #det #detail,#media img{
+    height: 40px;
+    width:40px;
+    margin-right: 10px;
+}
+#contacts #det #detail form{
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d6d6;
+    padding: 40px;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+#contacts #det #detail form input,textarea{
+    border-radius: 3px;
+    outline: none;
+    border: 0;
+    margin-top: 20px;
+    width: 300px;
+    padding: 5px;
+}
+#contacts div #detail form input{
+    height: 30px;
+}
+
+#contacts div #media{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+#contacts div #media div{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button{
+    background-color: #7b7b7b;
+    width: 30%;
+    margin-top: 30px;
+    border: none;
+    color: #f8f8f8;
+    font-size: 1rem;
+    padding: 2px 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+footer{
+    background-color: #222222;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f8f8f8;
+}
+
+@media (max-width:920px){
+    #contacts #det #detail form input,textarea{
+        margin-top: 20px;
+        width: 250px;
+        padding: 5px;
+    }
+
+    #contacts div #detail form input{
+        height: 25px;
+    }
+}
+
+
+@media (max-width:1180px){
+    
+    #main #page #back{
+        margin-right: 10%;
+    }
+}
+
+@media (max-width:1005px){
+    #main #page #left{
+        padding: 5%;
+    }
+}
+@media (max-width:900px) {
+    #main{
+        width: 100vw;
+        display: flex;
+        z-index: 2;
+    }
+    #main #page{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    #main #page #back img{
+        height: 310px;
+        width: 310px;
+        border: 5px solid black;
+        border-radius: 50%;
+    }
+    #main #page #left{
+        width: 100%;
+        height: 100%;
+    }
+    #main #page #back,#left{
+        justify-items: center;
+        align-content: center;
+    }
+}
+@media (max-width:845px) {
+    #contacts #det{
+        display: flex;
+        flex-direction: column;
+        padding-top: 25%;
+        justify-items: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+    #contacts{
+        padding: 5% 5%;
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width:810px) {
+    #main #page #left h1{
+        font-size: 4.5rem;
+        color:#222222;
+        padding: 0;
+        font-weight: 300;
+    }
+}
+
+@media (max-width:608px){
+    #skills #tech div img{
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header{
+        width: 100%;
+    }
+    #main{
+        width: auto;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    #main #page #back img{
+        height: 310px;
+        width: 310px;
+        border: 5px solid black;
+        border-radius: 50%;
+    }
+
+    #skills #tech .row{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
