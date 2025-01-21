@@ -263,19 +263,19 @@ hr{
 }
 
 #projects #all .content #pro1{
-    background-image: url(/images/weather.jpg);
+    background-image: url(./images/weather.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 #projects #all .content #pro2{
-    background-image: url(/images/students.jpg);
+    background-image: url(./images/students.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 #projects #all .content #pro3{
-    background-image: url(/images/calc.jpg);
+    background-image: url(./images/calc.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
