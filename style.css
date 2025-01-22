@@ -532,6 +532,10 @@ footer{
         left: 0px;
     }
 
+    #about{
+        height: auto;
+    }
+
     #about #para{
         width: 100%;
     }
