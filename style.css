@@ -531,11 +531,7 @@ footer{
     ul.menu{
         left: 0px;
     }
-
-    #about{
-        height: auto;
-    }
-
+    
     #about #para{
         width: 100%;
     }
@@ -626,6 +622,11 @@ footer{
         height: 100vh;
     }
 
+    #about #para p{
+        font-size: 1.5rem;
+        margin-top: -150px;
+    }
+
     #skills #tech .row{
         display: flex;
         justify-content: space-evenly;
@@ -635,5 +636,11 @@ footer{
 @media (max-width:400px){
     #main #page #left{
         padding-left: 50px;
+    }
+}
+
+@media (max-width:380px) {
+    #about #para p{
+        font-size: 1.3rem;
     }
 }
