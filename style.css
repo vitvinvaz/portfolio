@@ -646,6 +646,10 @@ footer{
         display: flex;
         justify-content: space-evenly;
     }
+    #about #para p{
+        color: #d9d6d6;
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width:400px){
