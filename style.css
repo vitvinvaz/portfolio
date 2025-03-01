@@ -646,6 +646,10 @@ footer{
         display: flex;
         justify-content: space-evenly;
     }
+    #projects #all .content a{
+        height: 180px;
+        width: 180px;
+    }
     footer p{
         color: #d9d6d6;
     }
