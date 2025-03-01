@@ -226,7 +226,6 @@ hr{
 
 #projects{
     width: 100%;
-    height: 100vh;
     padding: 5% 5%;
     display: flex;
     flex-direction: column;
@@ -240,10 +239,8 @@ hr{
 #projects #all{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
 }
 #projects #all .content{
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -253,6 +250,7 @@ hr{
 #projects #all .content a{
     width: 250px;
     height: 80%;
+    margin: 20px;
     border-radius: 10px;
     text-decoration: none;
     display: flex;
@@ -278,6 +276,13 @@ hr{
 }
 #projects #all .content #pro3{
     background-image: url(./images/calc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: end;
+}
+#projects #all .content #pro4{
+    background-image: url(./images/ecommerce.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
