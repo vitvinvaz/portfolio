@@ -650,6 +650,10 @@ footer{
         height: 180px;
         width: 180px;
     }
+    #projects #all .content a:hover{
+        height: 190px;
+        width: 190px;
+    }
     footer p{
         color: #d9d6d6;
     }
