@@ -7,6 +7,11 @@
     font-style: normal;
     scroll-behavior: smooth;
 }
+#about h1,#contacts h1,#skills h1,#projects h1{
+    animation: top linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
+}
 body,html{
     width: 100%;
     background-color: #f8f8f8;
@@ -169,7 +174,6 @@ hr{
 }
 #about #para{
     width: 80%;
-    height: 100%;
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -178,6 +182,7 @@ hr{
 #about #para p{
     font-size: 2rem;
     color: #7b7b7b;
+    text-align: justify;
 }
 
 #skills{
@@ -217,6 +222,9 @@ hr{
     align-items: center;
     color:#f8f8f8;
     box-shadow: 5px 5px 10px rgba(45, 45, 45,0.8);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
 }
 #skills #tech div img{
     width: 76px;
@@ -260,6 +268,9 @@ hr{
     rotate:-5deg;
     transition: 0.5s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0,1);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
 }
 
 #projects #all .content #pro1{
@@ -633,13 +644,8 @@ footer{
         border: 5px solid black;
         border-radius: 50%;
     }
-    #about #para{
-        height: 100vh;
-    }
-
     #about #para p{
-        font-size: 1.5rem;
-        margin-top: -150px;
+        font-size: 1.3rem;
     }
 
     #skills #tech .row{
@@ -668,5 +674,28 @@ footer{
 @media (max-width:380px) {
     #about #para p{
         font-size: 1.3rem;
+    }
+}
+
+
+@keyframes appear{
+    from{
+        scale: 0.5;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes top{
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
