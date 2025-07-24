@@ -76,6 +76,7 @@ body,html{
     align-items: center;
     justify-content: center;
     z-index: 2;
+    position: relative;
 }
 #main #page{
     height: 100%;
@@ -92,10 +93,32 @@ body,html{
     width: 45%;
     height: 100%;
     gap: 5px;
+    position: relative;
     background: transparent;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
+}
+#main .github{
+    bottom: 25px;
+    left: 80px;
+    background-image: url('./images/github.png');
+}
+#main .leetcode{
+    bottom: 27px;
+    background-image: url('./images/leetcode.png');
+    left: 30px;  
+}
+#main .github,.leetcode{
+    position: absolute;
+    display: block;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.74));
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #main #page #left h1{
