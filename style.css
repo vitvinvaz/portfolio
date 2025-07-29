@@ -71,7 +71,6 @@ body,html{
 #main{
     max-height: 94vh;
     max-width: 100%;
-    background: linear-gradient(119deg, rgb(16, 121, 130) 6%, rgba(255,255,255,1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,11 +102,13 @@ body,html{
     bottom: 25px;
     left: 80px;
     background-image: url('./images/github.png');
+    animation: updown 4s infinite;
 }
 #main .leetcode{
     bottom: 27px;
     background-image: url('./images/leetcode.png');
     left: 30px;  
+    animation: downup 4s infinite;
 }
 #main .github,.leetcode{
     position: absolute;
@@ -124,6 +125,7 @@ body,html{
 #main #page #left h1{
     font-size: 6rem;
     padding: 0;
+    color: #222222;
     text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
     font-weight: 300;
 }
@@ -132,6 +134,7 @@ body,html{
     margin-top: -25px;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
     margin-left: 4px;
+    color: #222222;
     font-size: 1.3rem;
     left: 25px;
 }
@@ -139,7 +142,7 @@ body,html{
 
 #main #page #left a{
     background:transparent;
-    border: 1px solid #e7e4e4;
+    border: 1px solid #9d9797;
     text-decoration: none;
     color: #f8f8f8;
     padding: 7px;
@@ -270,75 +273,66 @@ hr{
 
 #projects #all{
     display: flex;
-    flex-direction: column;
-}
-#projects #all .content{
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+    padding-top: 70px;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
 }
 
-#projects #all .content a{
-    width: 250px;
-    height: 250px;
-    margin: 5px;
-    border-radius: 10px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    rotate:-5deg;
-    transition: 0.5s ease;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0,1);
+#projects #all .prod{
+    border: 2px solid rgb(95, 94, 94);
+    padding: 15px;
+    border-radius: 20px;
+    width: min-content;
     animation: appear linear;
     animation-timeline: view();
     animation-range:entry 0% cover 40%;
 }
 
-#projects #all .content #pro1{
-    background-image: url(./images/weather.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#projects #all .content #pro2{
-    background-image: url(./images/students.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#projects #all .content #pro3{
-    background-image: url(./images/calc.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    justify-content: end;
-}
-#projects #all .content #pro4{
-    background-image: url(./images/ecommerce.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    justify-content: end;
-}
-#projects #all .content a:hover{
-    width: 260px;
-    height: 260px;
-    transition: 0.5s ease;
-}
-#projects #all .content a h4{
-    font-size: 1.3rem;
+#projects #all .prod:hover{
+
 }
 
-#projects #all .content #allpro{
-    background-color: #e7e6e6;
-    border: none;
+#projects #all .prod .img{
+    width: 350px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.265),-2px -2px 10px rgba(0, 0, 0, 0.265);
+    border-radius: 10px;
 }
-#projects #all .con{
-    margin-top: 20px;
+
+#projects #all .prod h2{
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
 }
+
+#projects #all .prod div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#projects #all .prod p{
+    margin-top: 5px;
+    text-align: center;
+}
+
+#projects #all .prod div a{
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: #222222;
+    font-weight: 500;
+    padding: 5px 15px 5px 15px;
+    transition: 0.35s ease-in;
+}
+
+#projects #all .prod div a:hover{
+    background-color: rgb(21, 19, 18);
+    color: #f4f1f1;
+}
+
 #contacts{
     padding: 5% 5%;
     height: 100vh;
@@ -464,19 +458,6 @@ footer{
         max-width: 100vw;
         max-height: 100vh;
     }
-}
-
-
-@media (max-width:960px) {
-    #projects #all .content a{
-        height: 200px;
-        width: 200px;
-    }
-    #projects #all .content a:hover{
-        height: 210px;
-        width: 210px;
-    }
-    
 }
 
 @media (max-width:920px){
@@ -605,21 +586,6 @@ footer{
     }
 }
 
-@media (max-width:780px) {
-    #projects #all .content a{
-        height: 150px;
-        width: 150px;
-    }
-    #projects #all .content a:hover{
-        height: 150px;
-        width: 150px;
-    }
-    #projects #all .content a h4{
-        font-size: 1rem;
-    }
-
-    
-}
 
 @media (max-width:750px){
     #main #page #left{
@@ -676,16 +642,21 @@ footer{
         display: flex;
         justify-content: space-evenly;
     }
-    #projects #all .content a{
-        height: 180px;
-        width: 180px;
-    }
-    #projects #all .content a:hover{
-        height: 190px;
-        width: 190px;
-    }
     footer p{
         color: #d9d6d6;
+    }
+}
+
+@media (max-width:420px){
+    #projects #all .prod .img{
+        width: 270px;
+    }
+    #projects #all .prod h2{
+        font-size: 1.2rem;
+    }
+    #projects #all .prod p{
+        text-align: justify;
+        word-spacing: 0px;
     }
 }
 
@@ -723,3 +694,35 @@ footer{
         opacity: 1;
     }
 }
+
+@keyframes updown{
+    0%{
+        
+    }
+    25%{
+        translate: 0 2px;
+    }
+    75%{
+        translate: 0 -2px;
+    }
+    100%{
+        translate: 0;
+    }
+}
+
+@keyframes downup{
+    0%{
+        
+    }
+    25%{
+        translate: 0 -2px;
+    }
+    75%{
+        translate: 0 2px;
+    }
+    100%{
+        translate: 0;
+    }
+}
+
+
